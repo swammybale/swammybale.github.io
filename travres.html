@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Resources - Top50Cities.com</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light blue-gray background */
+        }
+        /* Custom styles for content readability */
+        .content-section p, .content-section ul, .content-section ol {
+            margin-bottom: 1rem;
+            line-height: 1.75;
+        }
+        .content-section h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .content-section ul, .content-section ol {
+            padding-left: 1.5rem;
+        }
+        .content-section ul.check-list li::before {
+            content: '✅'; /* Checkmark emoji */
+            margin-right: 0.5rem;
+        }
+        .content-section ul.x-list li::before {
+            content: '❌'; /* X mark emoji */
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- Header Section -->
+    <header class="bg-blue-700 text-white p-6 shadow-lg rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold rounded-md px-3 py-1 bg-blue-800">Top50Cities.com</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-blue-200 transition duration-300 ease-in-out">Home</a></li>
+                    <li><a href="resources.html" class="font-semibold text-blue-200 border-b-2 border-blue-200 pb-1">Travel Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section - Travel Resources -->
+    <main class="flex-grow container mx-auto p-8 my-8 bg-white shadow-xl rounded-xl">
+        <section class="text-center mb-12">
+            <h2 class="text-5xl font-extrabold text-gray-800 mb-6">Travel Resources</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Essential tips and guidelines for every traveler. Make your journey smoother and more enjoyable with our comprehensive dos and don'ts.
+            </p>
+        </section>
+
+        <section class="content-section text-gray-700 max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+            <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-3xl font-bold text-green-700 mb-4 text-center">Travel Dos ✅</h3>
+                <ul class="list-none space-y-3 text-left pl-0 ul-reset check-list">
+                    <li>Plan your itinerary in advance but allow for spontaneity.</li>
+                    <li>Research local customs and etiquette to show respect.</li>
+                    <li>Pack light and efficiently to avoid baggage fees and hassle.</li>
+                    <li>Keep copies of important documents (passport, visa, tickets) both physical and digital.</li>
+                    <li>Inform your bank and credit card companies of your travel plans.</li>
+                    <li>Learn a few basic phrases in the local language.</li>
+                    <li>Stay hydrated, especially when flying or in hot climates.</li>
+                    <li>Try local cuisine and immerse yourself in the culture.</li>
+                    <li>Purchase travel insurance for unexpected situations.</li>
+                    <li>Stay aware of your surroundings and personal belongings.</li>
+                    <li>Capture memories with photos and journal entries.</li>
+                </ul>
+            </div>
+
+            <div class="bg-red-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-3xl font-bold text-red-700 mb-4 text-center">Travel Don'ts ❌</h3>
+                <ul class="list-none space-y-3 text-left pl-0 ul-reset x-list">
+                    <li>Don't overpack – you'll regret it when carrying luggage.</li>
+                    <li>Don't flash large amounts of cash or expensive jewelry.</li>
+                    <li>Don't ignore local laws or cultural norms.</li>
+                    <li>Don't rely solely on your phone for navigation and information (have backups).</li>
+                    <li>Don't forget to check visa requirements for your destination.</li>
+                    <li>Don't accept packages from strangers.</li>
+                    <li>Don't drink tap water unless confirmed safe.</li>
+                    <li>Don't engage in political discussions with strangers in sensitive regions.</li>
+                    <li>Don't forget to check the weather forecast before packing.</li>
+                    <li>Don't leave your valuables unattended, even for a moment.</li>
+                    <li>Don't be afraid to ask for help if you're lost or in trouble.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mt-12 text-center text-gray-600">
+            <p>Remember, responsible and informed travel makes for the best experiences. Happy travels!</p>
+        </section>
+    </main>
+
+    <!-- Footer Section (consistent with other pages) -->
+    <footer class="bg-gray-800 text-white p-6 mt-8 rounded-t-lg shadow-inner">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Top50Cities.com. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-2">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
