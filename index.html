@@ -163,32 +163,7 @@
             <a href="travres.html">Travel Resources</a>
         </p>
     </div>
-     <script>
-        // Place the JavaScript code provided previously here
-        document.addEventListener('DOMContentLoaded', function() {
-            const randomButton = document.getElementById('randomButton');
-            const cityLinks = document.querySelectorAll('.city-link'); // This selects all links with this class
 
-            if (cityLinks.length === 0) {
-                console.warn("No city links found with class 'city-link'. Make sure your links have this class.");
-                randomButton.disabled = true;
-                randomButton.textContent = "No cities available!";
-                return;
-            }
-
-            randomButton.addEventListener('click', function() {
-                const randomIndex = Math.floor(Math.random() * cityLinks.length);
-                const randomCityLink = cityLinks[randomIndex];
-                const targetUrl = randomCityLink.href;
-
-                if (targetUrl) {
-                    window.location.href = targetUrl;
-                } else {
-                    console.error("The selected random city link has no href attribute:", randomCityLink);
-                }
-            });
-        });
-    </script>
 
 </body>
 </html>
