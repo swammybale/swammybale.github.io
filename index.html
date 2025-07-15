@@ -71,7 +71,64 @@
 <div class="city-intro">
     <p>Ready for your next adventure? Our website is your ultimate guide to the <strong>top 50 cities to visit</strong> worldwide! Discover meticulously curated destinations from the historic grandeur of Rome and the romantic allure of Paris to the vibrant streetscapes of Bangkok and the futuristic marvels of Dubai. Whether you seek cultural immersion, culinary delights, or bustling nightlife, these <strong>top 50 cities</strong> consistently rank as global favorites.</p>
 </div>
-    
+
+    <h2 class="text-3xl text-center mb-6">Your Featured City:</h2>
+        <!-- This is where the random city will be displayed -->
+        <div id="randomCityDisplay">
+            <p>Click the button below to discover a random city!</p>
+        </div>
+
+        <button id="generateRandomButton">Show Me A New Random City!</button>
+   
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Selects ALL links with the class 'city-link' from anywhere in the document
+            const cityLinks = document.querySelectorAll('.city-link');
+            const randomCityDisplay = document.getElementById('randomCityDisplay');
+            const generateRandomButton = document.getElementById('generateRandomButton');
+
+            /**
+             * Function to pick a random city link and display its name and URL
+             * in the designated 'randomCityDisplay' div.
+             */
+            function displayRandomCity() {
+                // Check if any city links were found. If not, display a message and disable the button.
+                if (cityLinks.length === 0) {
+                    randomCityDisplay.innerHTML = '<p class="text-red-600 font-bold">Error: No city links found. Please ensure links have the class "city-link".</p>';
+                    generateRandomButton.disabled = true;
+                    generateRandomButton.textContent = "No cities available!";
+                    return; // Exit the function
+                }
+
+                // Generate a random index based on the number of found city links
+                const randomIndex = Math.floor(Math.random() * cityLinks.length);
+
+                // Get the randomly selected <a> element
+                const randomCityLink = cityLinks[randomIndex];
+
+                // Extract the city name (text content) and its URL (href attribute)
+                const cityName = randomCityLink.textContent;
+                const cityUrl = randomCityLink.href;
+
+                // Update the content of the 'randomCityDisplay' div
+                randomCityDisplay.innerHTML = `
+                    <h3 class="text-blue-700">${cityName}</h3>
+                    <p class="text-gray-700">Explore the vibrant culture and attractions of this amazing destination!</p>
+                    <a href="${cityUrl}" target="_blank" rel="noopener noreferrer" class="mt-4">Visit ${cityName} Tourism Site</a>
+                `;
+                // target="_blank" opens the link in a new browser tab.
+                // rel="noopener noreferrer" is a security best practice when using target="_blank".
+            }
+
+            // Call the function once when the page initially loads to show a featured city
+            displayRandomCity();
+
+            // Add an event listener to the button to display a new random city on click
+            generateRandomButton.addEventListener('click', displayRandomCity);
+        });
+    </script>
+
     <div class="continent-section">
         <h2>Europe</h2>
         <ul>
